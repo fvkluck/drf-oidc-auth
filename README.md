@@ -81,6 +81,27 @@ OIDC_AUTH = {
 }
 ```
 
+# Validating claims
+
+You can use the OIDC_CLAIMS_OPTIONS to specify which value/values are allowed, or to specify a validating function. For example, if you want to check a maximum age based on the iat claim, you could do:
+```
+{
+    "iss": {
+        "essential": True,
+        "values": ["https://example.com", "https://example.org"]
+    },
+    "sub": {
+        "essential": True
+        "value": "123412341234"
+    },
+    "iat": {
+        "essential": True,
+        "validate": lambda iat: iat - int(time.time()) <= MAX_AGE
+    }
+}
+```
+For more information see the documentation of [authlib](https://docs.authlib.org/en/latest/jose/jwt.html#jwt-payload-claims-validation).
+
 # Running tests
 
 ```sh
