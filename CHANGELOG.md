@@ -1,4 +1,8 @@
 <h1>Changelog</h1>
+
+<h2>2.0.0</h2>
+Drop Python 3.4 support.
+
 <h2>1.0.0</h2>
 Replace the deprecated `jwkest` library with the maintained `authlib` library. Note that this is not backwards compatible, but this might not be immediately obvious. You have to adjust your settings, i.e. `OIDC_AUDIENCES` is deprecated and replaced by:
 
