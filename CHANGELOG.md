@@ -1,4 +1,6 @@
 <h1>Changelog</h1>
+<h2>3.1.0</h2>
+Removed checks on exp and iat value within the drf-oidc-auth package. Refer to the readme, section 'validating claims' for more information on how to add these checks.
 
 <h2>2.0.0</h2>
 Drop Python 3.4 support.
